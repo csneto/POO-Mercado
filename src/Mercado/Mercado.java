@@ -18,11 +18,11 @@ public class Mercado {
 	public Mercado() {
 		this.produtos = new ArrayList<Produto>();
 	}
-	public String[] leValores (String [] dadosIn){
+	public String[] leValores (String [] dadosIn, String categoria){
 		String [] dadosOut = new String [dadosIn.length];
 
 		for (int i = 0; i < dadosIn.length; i++)
-			dadosOut[i] = JOptionPane.showInputDialog  ("Entre com " + dadosIn[i]+ ": ");
+			dadosOut[i] = JOptionPane.showInputDialog  ("Caterogia: "+ categoria +"\nEntre com " + dadosIn[i]+ ": ");
 
 		return dadosOut;
 	}
@@ -31,7 +31,7 @@ public class Mercado {
 
 		String [] valores = new String [5];
 		String [] nomeVal = {"Nome", "Preço", "Quantidade", "Importado [S/N]?", "Teor Alcoolico em %"};
-		valores = leValores (nomeVal);
+		valores = leValores (nomeVal, "Bebida");
 
 		int preco = this.retornaInteiro(valores[1]);
 		int quantidade = this.retornaInteiro(valores[2]);
@@ -46,7 +46,7 @@ public class Mercado {
 
 		String [] valores = new String [4];
 		String [] nomeVal = {"Nome", "Preço", "Quantidade", "Temperatura Armazenagem"};
-		valores = leValores (nomeVal);
+		valores = leValores (nomeVal, "Laticinio");
 
 		int preco = this.retornaInteiro(valores[1]);
 		int quantidade = this.retornaInteiro(valores[2]);
@@ -59,7 +59,7 @@ public class Mercado {
 
 		String [] valores = new String [4];
 		String [] nomeVal = {"Nome", "Preço", "Quantidade", "Toxico [S/N]"};
-		valores = leValores (nomeVal);
+		valores = leValores (nomeVal, "Limpeza");
 
 		int preco = this.retornaInteiro(valores[1]);
 		int quantidade = this.retornaInteiro(valores[2]);

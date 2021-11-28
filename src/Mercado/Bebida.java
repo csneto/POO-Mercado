@@ -5,7 +5,7 @@ public class Bebida extends Produto {
 	private boolean importado;
 
 	public String detalhes () {
-		String detalhes = "Tipo: Bebida\n";		//coloca a classificacao do produto
+		String detalhes = "Categoria: " + super.categoria + "\n";		//coloca a categoria do produto
 		detalhes += "Teor Alcoolico: " + this.teorAlcoolico + "\n";
 		detalhes += isImportado();
 		return detalhes;
@@ -22,7 +22,7 @@ public class Bebida extends Produto {
 	}
 
 	public Bebida(String nome, int preco, int quantidade, boolean _importado, String _teorAlcoolico) {
-		super(nome, preco, quantidade, _importado, _teorAlcoolico);
+		super(nome, preco, quantidade, "Bebida", _importado, _teorAlcoolico);
 		this.teorAlcoolico = _teorAlcoolico;
 		this.importado = _importado;
 	}

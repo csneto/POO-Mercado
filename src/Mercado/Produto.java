@@ -8,12 +8,13 @@ public abstract class Produto implements Serializable {
 	private   String nome;
 	private   float preco;
 	private   int quantidade;
-	protected String tipo;
+	protected String categoria;
 	
-	public Produto(String nome, int preco, int quantidade, boolean _check, String detalhe) {
+	public Produto(String nome, int preco, int quantidade, String categoria, boolean _check, String detalhe) {
 		this.nome = nome;
 		this.preco = preco;
 		this.quantidade = quantidade;
+		this.categoria = categoria;
 	}
 	public String toString() {
 		String retorno = "";

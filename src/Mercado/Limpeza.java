@@ -5,7 +5,7 @@ public class Limpeza extends Produto {
 	private boolean toxico;
 
 	public String detalhes () {
-		String detalhes = "Tipo: Bebida\n";		//coloca a classificacao do produto
+		String detalhes = "Categoria: " + super.categoria + "\n";		//coloca a categoria do produto
 		detalhes += isToxico();
 		return detalhes;
 	}
@@ -21,7 +21,7 @@ public class Limpeza extends Produto {
 	}
 
 	public Limpeza(String nome, int preco, int quantidade, boolean _toxico) {
-		super(nome, preco, quantidade, _toxico, "");
+		super(nome, preco, quantidade, "Limpeza",_toxico, "");
 		this.toxico = _toxico;
 	}
 }
