@@ -95,27 +95,4 @@ public class Mercado1 {
 		}
 	}
 
-/*
-	public static void main(String[] args) {
-		Mercado1 mercado  = new Mercado1();
-
-		Gato felix    = new Gato("Felix",    3, "Maria");
-		Gato garfield = new Gato("Garfield", 7, "Maria");
-		Cao  rex      = new Cao ("Rex",  2, "Jose");
-		Cao  toto     = new Cao ("Toto", 5, "Jose");
-		mercado.adicionaProduto(felix);
-		mercado.adicionaProduto(garfield);
-		mercado.adicionaProduto(rex);
-		mercado.adicionaProduto(toto);
-		mercado.listarProdutos();
-		mercado.gravarProdutos();
-		mercado.excluirProduto(garfield);
-		mercado.listarProdutos();
-		mercado.excluirProdutos();
-		mercado.listarProdutos();
-		mercado.recuperarProdutos();
-		mercado.listarProdutos();
-	}
-	*/
-
 }

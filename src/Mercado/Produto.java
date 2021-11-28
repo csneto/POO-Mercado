@@ -10,7 +10,7 @@ public abstract class Produto implements Serializable {
 	private   int quantidade;
 	protected String tipo;
 	
-	public Produto(String nome, int preco, int quantidade) {
+	public Produto(String nome, int preco, int quantidade, boolean _check, String detalhe) {
 		this.nome = nome;
 		this.preco = preco;
 		this.quantidade = quantidade;
@@ -18,8 +18,8 @@ public abstract class Produto implements Serializable {
 	public String toString() {
 		String retorno = "";
 		retorno += "Nome: "     + this.nome     + "\n";
-		retorno += "Preço: R$"    + this.preco    + " anos\n";
-		retorno += "Quantidade: "     + this.quantidade     + " unidades\n";
+		retorno += "Preço: R$"    + this.preco    + "\n";
+		retorno += "Quantidade: "     + this.quantidade     + " unidade(s)\n";
 		retorno += detalhes();
 		return retorno;
 	}

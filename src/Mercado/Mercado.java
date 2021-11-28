@@ -29,28 +29,45 @@ public class Mercado {
 
 	public Bebida leBebida (){
 
-		String [] valores = new String [3];
-		String [] nomeVal = {"Nome", "Preço", "Quantidade"};
+		String [] valores = new String [5];
+		String [] nomeVal = {"Nome", "Preço", "Quantidade", "Importado [S/N]?", "Teor Alcoolico em %"};
 		valores = leValores (nomeVal);
 
 		int preco = this.retornaInteiro(valores[1]);
 		int quantidade = this.retornaInteiro(valores[2]);
+		boolean importado = false;
+		if (valores[3].equals("S") || valores[3].equals("s")) importado = true;
 
-		Bebida bebida = new Bebida (valores[0], preco, quantidade);
+		Bebida bebida = new Bebida (valores[0], preco, quantidade, importado, valores[4]);
 		return bebida;
 	}
 
 	public Laticinio leLaticinio (){
 
-		String [] valores = new String [3];
-		String [] nomeVal = {"Nome", "Preço", "Quantidade"};
+		String [] valores = new String [4];
+		String [] nomeVal = {"Nome", "Preço", "Quantidade", "Temperatura Armazenagem"};
 		valores = leValores (nomeVal);
 
 		int preco = this.retornaInteiro(valores[1]);
 		int quantidade = this.retornaInteiro(valores[2]);
 		
-		Laticinio laticinio = new Laticinio(valores[0], preco, quantidade);
+		Laticinio laticinio = new Laticinio(valores[0], preco, quantidade, valores[3]);
 		return laticinio;
+	}
+
+	public Limpeza leLimpeza (){
+
+		String [] valores = new String [4];
+		String [] nomeVal = {"Nome", "Preço", "Quantidade", "Toxico [S/N]"};
+		valores = leValores (nomeVal);
+
+		int preco = this.retornaInteiro(valores[1]);
+		int quantidade = this.retornaInteiro(valores[2]);
+		boolean toxico = false;
+		if (valores[3].equals("S") || valores[3].equals("s")) toxico = true;
+		
+		Limpeza limpeza = new Limpeza(valores[0], preco, quantidade, toxico);
+		return limpeza;
 	}
 
 	private boolean intValido(String s) {
@@ -165,6 +182,8 @@ public class Mercado {
 				case 1: produtos.add((Produto)leBebida());
 				break;
 				case 2: produtos.add((Produto)leLaticinio());
+				break;
+				case 3: produtos.add((Produto)leLimpeza());
 				break;
 				default: 
 					JOptionPane.showMessageDialog(null,"Produto para entrada NÃO escolhido!");
