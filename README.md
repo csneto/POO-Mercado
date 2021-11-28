@@ -1,6 +1,13 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Projeto elaborado para a disciplina de Programação Orientada a Objetos do segundo semestre de 2021 da PucPR.
+
+ATIVIDADE SOMATIVA 2: Praticando a persistência de objetos em uma aplicação com interação por eventos
+
+Componentes:
+  CARLOS DA SILVA NETO .
+  GIOVANA BEATRIZ MORO DE OLIVEIRA .
+  MELISSA WUNSCH
 
 ## Folder Structure
 
